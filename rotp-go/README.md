@@ -23,15 +23,18 @@ the waters with Go Lambda's and the Serverless framework.
 ### Getting Started
 
 PRE) Make sure you have the [serverless](https://serverless.com/framework/docs/providers/aws/guide/installation/) 
-framework installed and your AWS CLI configured to your own account.
+framework installed and your [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) configured to 
+your own account.
 
 -----
 
-I've setup a sample request for the serverless framework that can be invoked with:
+1) Create your lambda: `$ make && serverless deploy`
+2) Test your lambda: `$ serverless invoke -f rotp-go -p data.json`
 
-`serverless invoke -f rotp-go -p data.json`
+### More info
 
-That sends over the following (Base64 encoded) to the endpoint:
+I've setup a sample request for the serverless framework that can be invoked to sends over 
+the following (Base64 encoded) to the endpoint:
 
 ```
 5
