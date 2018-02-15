@@ -9,8 +9,8 @@ import (
 // using AWS lambda; Here's the individual response for a result of a test. The end result _should_
 // be an array of these.
 type TestResult struct {
-	Result       int   `json:"result"`
-	TestNumber   int   `json:"testNumber"`
+	Result       int     `json:"result"`
+	TestNumber   int     `json:"testNumber"`
 	TestPattern  string  `json:"testPattern"`
 }
 
