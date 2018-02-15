@@ -9,7 +9,7 @@ the waters with Go Lambda's and the Serverless framework.
 
 ![Example](./assets/capture.gif)
 
-An example client can be found [here](https://d2vvhdwd9d3qum.cloudfront.net).
+An example client can be found [here](http://rotp-ui.s3-website-us-west-2.amazonaws.com/).
 
 ---
 
