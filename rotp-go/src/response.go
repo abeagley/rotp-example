@@ -16,7 +16,7 @@ type Response struct {
 }
 
 // We broke things, lets make sure we format the error with proper JSON for a UI to consume.
-func CreateErrorResponse(message string) (events.APIGatewayProxyResponse) {
+func CreateErrorResponse(message string) events.APIGatewayProxyResponse {
 	msg, err := json.Marshal(ErrorResponse{
 		Error: message,
 	})
@@ -35,7 +35,7 @@ func CreateErrorResponse(message string) (events.APIGatewayProxyResponse) {
 }
 
 // We solved things (hopefully!), lets make sure we format the error with proper JSON for a UI to consume.
-func CreateResponse(data []*TestResult) (events.APIGatewayProxyResponse) {
+func CreateResponse(data []*TestResult) events.APIGatewayProxyResponse {
 	respJSON, err := json.Marshal(Response{
 		Data: data,
 	})

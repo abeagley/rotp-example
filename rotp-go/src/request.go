@@ -14,7 +14,7 @@ type RequestBody struct {
 }
 
 // This function takes the encoded base64 string and turns it into a multi-line string for solving.
-func decodeTestContents(body *RequestBody) (error) {
+func decodeTestContents(body *RequestBody) error {
 	decodedContents, err := base64.StdEncoding.DecodeString(body.TestContents)
 
 	if err != nil {
