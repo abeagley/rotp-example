@@ -1,0 +1,6 @@
+.i-text-area {
+  height: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  resize: none;
+}

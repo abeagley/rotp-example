@@ -21,15 +21,22 @@ func CreateErrorResponse(message string) events.APIGatewayProxyResponse {
 		Error: message,
 	})
 
+	headers := map[string]string{
+		"Access-Control-Allow-Origin": "*",
+		"Access-Control-Allow-Credentials": "*",
+	}
+
 	if err != nil {
 		return events.APIGatewayProxyResponse{
 			Body: err.Error(),
+			Headers: headers,
 			StatusCode: 500,
 		}
 	}
 
 	return events.APIGatewayProxyResponse{
 		Body: string(msg),
+		Headers: headers,
 		StatusCode: 400,
 	}
 }
@@ -46,6 +53,10 @@ func CreateResponse(data []*TestResult) events.APIGatewayProxyResponse {
 
 	return events.APIGatewayProxyResponse{
 		Body: string(respJSON),
+		Headers: map[string]string{
+			"Access-Control-Allow-Origin": "*",
+			"Access-Control-Allow-Credentials": "*",
+		},
 		StatusCode: 200,
 	}
 }
